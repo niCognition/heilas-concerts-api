@@ -3,9 +3,7 @@ package com.example;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.sql.Time;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 //Table - Concert
 
@@ -29,7 +27,7 @@ public class Concert {
     private String stage;
 
     @Column(name = "age_limit")
-    private Integer ageLimit;
+    private String ageLimit;
 
     @Column(name = "band_info")
     private String bandInfo;
@@ -45,7 +43,7 @@ public class Concert {
     }
 
     public Concert(
-            String bandName, LocalDateTime dateTime, String stage, Integer ageLimit,
+            String bandName, LocalDateTime dateTime, String stage, String ageLimit,
             String bandInfo, String bandImageUrl, String spotifyId) {
         this.bandName = bandName;
         this.dateTime = dateTime;
