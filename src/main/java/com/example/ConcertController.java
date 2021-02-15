@@ -14,11 +14,13 @@ public class ConcertController {
     @Autowired
     private ConcertService service;
 
+    @CrossOrigin
     @GetMapping("/concerts")
     public List<Concert> list() {
         return service.listAll();
     }
 
+    @CrossOrigin
     @GetMapping("/concerts/{id}")
     public ResponseEntity<Concert> get(@PathVariable Integer id) {
         try {
@@ -29,11 +31,13 @@ public class ConcertController {
         }
     }
 
+    @CrossOrigin
     @PostMapping("/concerts")
     public void add(@RequestBody Concert concert) {
         service.save(concert);
     }
 
+    @CrossOrigin
     @PutMapping("/concerts/{id}")
     public ResponseEntity<?> update(@RequestBody Concert concert,
                                     @PathVariable Integer id) {
@@ -47,6 +51,7 @@ public class ConcertController {
         }
     }
 
+    @CrossOrigin
     @DeleteMapping("/concerts/{id}")
     public void delete(@PathVariable Integer id) {
         service.delete(id);
