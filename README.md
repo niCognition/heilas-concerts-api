@@ -2,7 +2,7 @@
 simple rest api with crud operations using spring boot and hibernate
 
 ## Needed to run:
-a postgresql database then change the url to your database-url or simply create a postgresql database called heilas_concert running on port localhost:5432.
+a postgresql database then change the url to your database-url or simply create a postgresql database called heilas_concert running on port localhost:5432. with a user called: heilas_concert and password: newton.
 
 ## How to run:
 Open the project in your prefered IDEA I used IntelliJ.
